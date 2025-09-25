@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* -------------------- Profiles Section ---------------- */
+.profiles-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.middle-infinity{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.omar {
+  background-image: url("img/omar.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  background-color: #024950;
+  transition: background-image 0.3s ease-in-out;
+  position: relative;
+}
+.omar:hover {
+  background-image: url("img/omar.png");
+}
+.omar-socials {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  transform: preserve-3d;
+  transform: perspective(1000px);
+}
+.omar-socials a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 8px;
+  transform: translateZ(20px);
+}
+
+.omar-socials a img {
+  width: 24px;
+  height: 24px;
+}
+
+.omar h2 {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  color: #000;
+  font-size: 2em;
+}
+
+.omar p {
+  position: absolute;
+  bottom: 75px;
+  left: 35px;
+  color: #000;
+  font-size: 1.2em;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.modibo {
+  background-image: url("img/modibo.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  background-color: #964734;
+  transition: background-image 0.3s ease-in-out;
+  position: relative;
+}
+.modibo:hover {
+  background-image: url("img/modibo.png");
+}
+.modibo-socials {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  transform: preserve-3d;
+  transform: perspective(1000px);
+}
+.modibo-socials a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 8px;
+  transform: translateZ(20px);
+}
+.modibo-socials a img {
+  width: 24px;
+  height: 24px;
+}
+
+.modibo h2 {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  color: #000;
+  font-size: 2em;
+}
+
+.modibo p {
+  position: absolute;
+  bottom: 75px;
+  right: 35px;
+  color: #000;
+  font-size: 1.2em;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.infinity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.infinity path {
+  fill: #03045e;
+  filter: drop-shadow(0 0 10px rgba(52, 52, 52, 0.16));
+}
