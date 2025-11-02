@@ -25,7 +25,6 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
-  overflow: hidden;
 }
 
 /* 6. Improve media defaults */
@@ -70,6 +69,10 @@ h6 {
   text-wrap: balance;
 }
 
+ul {
+  list-style: none;
+}
+
 /*
   10. Create a root stacking context
 */
@@ -101,7 +104,7 @@ h6 {
   background-size: cover;
   width: 50%;
   height: 100%;
-  background-color: #024950;
+  background-color: #066bbe;
   transition: background-image 0.3s ease-in-out;
   position: relative;
 }
@@ -156,7 +159,7 @@ h6 {
   background-size: cover;
   width: 50%;
   height: 100%;
-  background-color: #964734;
+  background-color: rgb(223, 223, 29);
   transition: background-image 0.3s ease-in-out;
   position: relative;
 }
