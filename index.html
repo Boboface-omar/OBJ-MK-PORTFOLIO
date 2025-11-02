@@ -18,7 +18,7 @@
                 d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916z" />
         </svg>
         <div class="omar">
-            <div class="omar-socials" data-tilt data-tilt-max="20" data-tilt-speed="400">
+            <div class="omar-socials">
                 <a href="#" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
                 <a href="#" target="_blank"><img src="img/instagram.png" alt=""></a>
                 <a href="#" target="_blank"><img src="img/linkedin.png" alt=""></a>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="modibo">
-            <div class="modibo-socials" data-tilt data-tilt-max="20" data-tilt-speed="400">
+            <div class="modibo-socials">
                 <a href="#" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
                 <a href="#" target="_blank"><img src="img/instagram.png" alt=""></a>
                 <a href="#" target="_blank"><img src="img/linkedin.png" alt=""></a>
@@ -38,10 +38,26 @@
             <h2>Modibo Kané</h2>
             <p>Backend Developer</p>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+</svg>
     </section>
+
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".omar-socials"), {
+            max: 25,
+            speed: 400
+        });
+        VanillaTilt.init(document.querySelector(".modibo-socials"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 </body>
 
 </html>
