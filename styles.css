@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "KaushanScript-Regular";
   src: url("Font/KaushanScript-Regular.otf");
   font-weight: normal;
@@ -23,7 +23,7 @@
   }
 }
 
-:root{
+:root {
   --light: #fff;
   --dark: #000;
 }
@@ -98,7 +98,7 @@ ul {
   position: relative;
 }
 
-.middle-infinity{
+.middle-infinity {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -113,12 +113,11 @@ ul {
   background-size: cover;
   width: 50%;
   height: 100%;
-  background-color: #066bbe;
   transition: background-image 0.3s ease-in-out;
   position: relative;
 }
 .omar:hover {
-  background-image: url("img/omar.png");
+  background-image: url("img/Omar.png");
 }
 .omar-socials {
   position: absolute;
@@ -129,7 +128,7 @@ ul {
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
-.omar-socials:hover{
+.omar-socials:hover {
   transition: transform 0.2s ease;
 }
 .omar-socials a {
@@ -146,7 +145,7 @@ ul {
 .omar-socials a img {
   width: 24px;
   height: 24px;
-  transform: translateZ(20px)
+  transform: translateZ(20px);
 }
 
 .omar h2 {
@@ -172,12 +171,11 @@ ul {
   background-size: cover;
   width: 50%;
   height: 100%;
-  background-color: rgb(223, 223, 29);
   transition: background-image 0.3s ease-in-out;
   position: relative;
 }
 .modibo:hover {
-  background-image: url("img/modibo.png");
+  background-image: url("img/Modibo.png");
 }
 .modibo-socials {
   position: absolute;
@@ -188,7 +186,7 @@ ul {
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
-.modibo-socials:hover{
+.modibo-socials:hover {
   transition: transform 0.2s ease;
 }
 .modibo-socials a {
@@ -204,7 +202,7 @@ ul {
 .modibo-socials a img {
   width: 24px;
   height: 24px;
-  transform: translateZ(20px)
+  transform: translateZ(20px);
 }
 
 .modibo h2 {
@@ -234,7 +232,7 @@ ul {
 }
 
 .infinity path {
-  fill: #03045e;
+  fill: #03043b;
   filter: drop-shadow(0 0 10px rgba(52, 52, 52, 0.16));
 }
 
@@ -253,7 +251,11 @@ ul {
   background-color: rgba(255, 255, 255, 0.7);
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   40% {
@@ -265,18 +267,18 @@ ul {
 }
 
 /* Preloader */
-.preloader img{
+.preloader img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.preloader p{
+.preloader p {
   text-transform: uppercase;
   text-align: center;
   font-size: 0.8em;
   font-weight: 550;
 }
-.preloader-header a{
+.preloader-header a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--light);
@@ -285,7 +287,7 @@ ul {
   line-height: 0.9;
   display: block;
 }
-.preloader{
+.preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -297,7 +299,7 @@ ul {
   overflow: hidden;
   z-index: 2;
 }
-.progress-bar{
+.progress-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -308,7 +310,7 @@ ul {
   transform-origin: left;
   will-change: transform;
 }
-.preloader-images{
+.preloader-images {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -319,7 +321,7 @@ ul {
   will-change: clip-path;
   overflow: hidden;
 }
-.preloader-images .img{
+.preloader-images .img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -327,13 +329,13 @@ ul {
   will-change: clip-path;
   overflow: hidden;
 }
-.preloader-images .img img{
+.preloader-images .img img {
   position: relative;
   transform: scale(2);
   will-change: transform;
   border-radius: 12px;
-} 
-.preloader-copy{
+}
+.preloader-copy {
   position: absolute;
   bottom: 5rem;
   left: 50%;
@@ -341,39 +343,168 @@ ul {
   width: 30%;
   color: var(--light);
 }
-.preloader-header{
+.preloader-header {
   position: fixed;
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: translateY(70svh);
-  transform-origin: top; 
-  will-change:transform;
+  transform-origin: top;
+  will-change: transform;
   z-index: 2;
 }
 
 .preloader-header a .char,
-.preloader-copy p .line{
+.preloader-copy p .line {
   display: inline-block;
   transform: translateY(0);
   position: relative;
   will-change: transform;
 }
 
-@media (max-width: 1000px){
-  .preloader-images{
+@media (max-width: 1000px) {
+  .preloader-images {
     top: 35%;
     width: 10rem;
     height: 10rem;
   }
-  .preloader-copy{
+  .preloader-copy {
     width: 80%;
   }
-  .preloader-header{
+  .preloader-header {
     transform: translateY(50svh);
   }
-  .preloader-header a{
+  .preloader-header a {
     font-size: 3rem;
   }
+}
+
+/* Main Navigation Styles */
+.main-nav {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.main-nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Stacks Section */
+.stacks-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #cecaca;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+.stacks-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+.stacks-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 260px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.stacks-section .stack-item {
+  position: absolute;
+  width: 100%;
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Superposition décalée */
+.stack-item:nth-child(1) {
+  transform: rotate(-6deg) translateY(0px);
+  z-index: 10;
+}
+.stack-item:nth-child(2) {
+  transform: rotate(-3deg) translateY(5px);
+  z-index: 9;
+}
+.stack-item:nth-child(3) {
+  transform: rotate(0deg) translateY(10px);
+  z-index: 8;
+}
+.stack-item:nth-child(4) {
+  transform: rotate(3deg) translateY(15px);
+  z-index: 7;
+}
+.stack-item:nth-child(5) {
+  transform: rotate(6deg) translateY(20px);
+  z-index: 6;
+}
+.stack-item:nth-child(6) {
+  transform: rotate(-5deg) translateY(25px);
+  z-index: 5;
+}
+.stack-item:nth-child(7) {
+  transform: rotate(5deg) translateY(30px);
+  z-index: 4;
+}
+.stack-item:nth-child(8) {
+  transform: rotate(-2deg) translateY(35px);
+  z-index: 3;
+}
+.stack-item:nth-child(9) {
+  transform: rotate(2deg) translateY(40px);
+  z-index: 2;
+}
+.stack-item:nth-child(10) {
+  transform: rotate(0deg) translateY(45px);
+  z-index: 1;
+}
+
+/* Ombres et effet d’élévation */
+.stacks-container:hover .stack-item {
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
+}
+
+.stacks-container .stack-item:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
