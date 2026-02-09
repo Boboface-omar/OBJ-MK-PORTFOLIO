@@ -117,7 +117,7 @@ ul {
   position: relative;
 }
 .omar:hover {
-  background-image: url("img/Omar.png");
+  background-image: url("img/omar.png");
 }
 .omar-socials {
   position: absolute;
@@ -175,7 +175,7 @@ ul {
   position: relative;
 }
 .modibo:hover {
-  background-image: url("img/Modibo.png");
+  background-image: url("img/modibo.png");
 }
 .modibo-socials {
   position: absolute;
@@ -426,9 +426,9 @@ ul {
   background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.stacks-section h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+.stacks-section h2 {
+  font-size: 2.5rem;
+  margin: 20px 0;
   color: var(--dark);
 }
 .stacks-container {
@@ -450,7 +450,7 @@ ul {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 150px;
+  width: 170px;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -508,3 +508,5 @@ ul {
 .stacks-container .stack-item:hover {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
+
+/* Projects Section */

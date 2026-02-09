@@ -104,7 +104,7 @@ let hoverTimeline;
 
 // (bounce par défaut)
 cards.forEach((card, i) => {
-  const delay = i * 0.1; // petit décalage pour que le bounce soit ondulé
+  const delay = i * 0.1; // Petit décalage pour que le bounce soit ondulé
   gsap.to(card, {
     y: "+=10",
     duration: 1.2,
@@ -122,7 +122,7 @@ container.addEventListener("mouseenter", () => {
   });
 
   const centerIndex = Math.floor(cards.length / 2);
-  const spacing = 120; // espace entre cartes
+  const spacing = 120; // Espace entre cartes
 
   cards.forEach((card, i) => {
     const offset = (i - centerIndex) * spacing;
