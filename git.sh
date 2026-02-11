@@ -11,6 +11,5 @@ if git diff --cached --quiet; then
 fi
 
 git commit -m "$MESSAGE"
-git push origin master
 
 echo "🚀 Code envoyé sur GitHub"
