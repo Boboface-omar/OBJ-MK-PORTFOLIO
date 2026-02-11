@@ -541,19 +541,18 @@ ul {
 
 .gallery-section .gallery-container .left {
  position: absolute;
-  left: -160px;
-  bottom: 0;
-  
+ top: 0;
+ left: -200px;
 }
 .gallery-section .gallery-container .right {
   position: absolute;
-  right: -160px;
   bottom: 0;
+  right: -200px;
 }
 .gallery-section .gallery-container .left img,
 .gallery-section .gallery-container .right img {
   width: 550px;
   height: 100%;
   object-fit: cover;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }

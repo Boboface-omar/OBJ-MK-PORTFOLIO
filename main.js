@@ -1,5 +1,7 @@
 CustomEase.create("hop", "0.9, 0, 0.1, 1");
 
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.set([".preloader-header a", ".preloader-copy p"], { autoAlpha: 0, y: 20 });
 
 const preloaderImages = gsap.utils.toArray(".preloader-images .img");
@@ -122,7 +124,7 @@ container.addEventListener("mouseenter", () => {
   });
 
   const centerIndex = Math.floor(cards.length / 2);
-  const spacing = 120; // Espace entre cartes
+  const spacing = 100; // Espace entre cartes
 
   cards.forEach((card, i) => {
     const offset = (i - centerIndex) * spacing;
@@ -165,3 +167,28 @@ cards.forEach((card) => {
     });
   });
 });
+
+  // Animation de la section Galerie
+  const galleryLeft = document.querySelector(".gallery-section .left");
+  const galleryRight = document.querySelector(".gallery-section .right");
+
+  // Positionnement initial : les images sont cachées dans leurs coins respectifs (seulement horizontalement)
+  // galleryLeft est en haut à gauche, complètement hors écran à gauche
+  gsap.set(galleryLeft, { xPercent: -100 });
+  // galleryRight est en bas à droite, complètement hors écran à droite
+  gsap.set(galleryRight, { xPercent: 100 });
+
+  // Création de la timeline GSAP pour l'animation de la galerie
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".gallery-section", // Déclencheur : la section .gallery-section
+      start: "top center", // L'animation commence quand le haut de la section atteint le centre de la fenêtre
+      end: "top", // L'animation se termine quand le bas de la section est atteint
+      scrub: true, // L'animation est liée au défilement (réversible)
+    },
+  })
+  // Animation de l'image de gauche : se déplace de son coin caché à gauche vers sa position CSS (coin visible)
+  .to(galleryLeft, { xPercent: 0, ease: "power1.out" }, 0)
+  // Animation de l'image de droite : se déplace de son coin caché à droite vers sa position CSS (coin visible)
+  .to(galleryRight, { xPercent: 0, ease: "power1.out" }, 0);
+
