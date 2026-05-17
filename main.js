@@ -3,6 +3,7 @@ CustomEase.create("hop", "0.9, 0, 0.1, 1");
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.set([".preloader-header a", ".preloader-copy p"], { autoAlpha: 0, y: 20 });
+gsap.set(".cta-button", { autoAlpha: 0, scale: 0.8 });
 
 const preloaderImages = gsap.utils.toArray(".preloader-images .img");
 const preloaderImagesInner = gsap.utils.toArray(".preloader-images img");
@@ -95,6 +96,17 @@ tl.from(
     autoAlpha: 0,
     duration: 1,
     ease: "power3.out",
+  },
+  "-=0.5"
+);
+
+tl.to(
+  ".cta-button",
+  {
+    autoAlpha: 1,
+    scale: 1,
+    duration: 1.2,
+    ease: "back.out(1.7)",
   },
   "-=0.5"
 );
