@@ -541,7 +541,7 @@ ul {
 
 .gallery-section .gallery-container .left {
  position: absolute;
- top: 0;
+ bottom: 0;
  left: -200px;
 }
 .gallery-section .gallery-container .right {
