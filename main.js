@@ -181,26 +181,30 @@ cards.forEach((card) => {
 });
 
   // Animation de la section Galerie
+  const galleryItems = document.querySelectorAll(".gallery-section .gallery-item");
   const galleryLeft = document.querySelector(".gallery-section .left");
   const galleryRight = document.querySelector(".gallery-section .right");
 
-  // Positionnement initial : les images sont cachées dans leurs coins respectifs (seulement horizontalement)
-  // galleryLeft est en haut à gauche, complètement hors écran à gauche
+  // Positionnement initial des images latérales
   gsap.set(galleryLeft, { xPercent: -100 });
-  // galleryRight est en bas à droite, complètement hors écran à droite
   gsap.set(galleryRight, { xPercent: 100 });
 
-  // Création de la timeline GSAP pour l'animation de la galerie
+  // Timeline pour l'animation au scroll
   gsap.timeline({
     scrollTrigger: {
-      trigger: ".gallery-section", // Déclencheur : la section .gallery-section
-      start: "top center", // L'animation commence quand le haut de la section atteint le centre de la fenêtre
-      end: "top", // L'animation se termine quand le bas de la section est atteint
-      scrub: true, // L'animation est liée au défilement (réversible)
+      trigger: ".gallery-section",
+      start: "top center",
+      end: "top",
+      scrub: true,
     },
   })
-  // Animation de l'image de gauche : se déplace de son coin caché à gauche vers sa position CSS (coin visible)
+  // Animation des images latérales
   .to(galleryLeft, { xPercent: 0, ease: "power1.out" }, 0)
-  // Animation de l'image de droite : se déplace de son coin caché à droite vers sa position CSS (coin visible)
-  .to(galleryRight, { xPercent: 0, ease: "power1.out" }, 0);
-
+  .to(galleryRight, { xPercent: 0, ease: "power1.out" }, 0)
+  // Animation des cartes centrales (en gardant leur rotation CSS)
+  .from(galleryItems, {
+    opacity: 0,
+    y: 100,
+    stagger: 0.1,
+    ease: "power2.out"
+  }, 0);
