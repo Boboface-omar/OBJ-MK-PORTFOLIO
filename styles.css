@@ -575,6 +575,214 @@ ul {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
+/* Works Section */
+.works-section {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 100px 50px;
+  position: relative;
+}
+
+.works-section h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 80px;
+  color: var(--dark);
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Reduced gap for sticky stacking */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  height: 80vh; /* Fixed height for sticky effect */
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 50px;
+  margin-bottom: 100px;
+  position: sticky;
+  top: 10vh;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Entrance animation state (managed by GSAP) */
+.project-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.project-info p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.project-img {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.02);
+}
+
+/* Alternating alignment */
+.project-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-card:nth-child(even) .project-info {
+  text-align: right;
+}
+
+/* Staggered sticky offsets to show stacking */
+.project-card:nth-child(1) { top: 10vh; z-index: 1; }
+.project-card:nth-child(2) { top: 12vh; z-index: 2; }
+.project-card:nth-child(3) { top: 14vh; z-index: 3; }
+.project-card:nth-child(4) { top: 16vh; z-index: 4; }
+.project-card:nth-child(5) { top: 18vh; z-index: 5; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-card {
+    height: auto;
+    flex-direction: column !important;
+    text-align: center !important;
+    position: relative; /* Disable sticky on mobile for better UX */
+    top: 0 !important;
+    margin-bottom: 50px;
+  }
+  
+  .project-info {
+    order: 2;
+  }
+  
+  .project-img {
+    order: 1;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  width: 100%;
+  padding: 100px 50px;
+  background-color: #f9f9f9;
+}
+
+.testimonials-section h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 80px;
+  color: var(--dark);
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.client-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--dark);
+}
+
+.client-info h4 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--dark);
+}
+
+.client-info span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 20px;
+  }
+  
+  .testimonial-card {
+    max-width: 100%;
+  }
+}
+
 /* Gallery Section */
 .gallery-section {
   width: 100%;

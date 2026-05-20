@@ -180,6 +180,40 @@ cards.forEach((card) => {
   });
 });
 
+// Project Cards Animation
+const projectCards = gsap.utils.toArray(".project-card");
+
+projectCards.forEach((card, i) => {
+  gsap.to(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+});
+
+// Testimonials Animation
+const testimonialCards = gsap.utils.toArray(".testimonial-card");
+
+gsap.to(testimonialCards, {
+  scrollTrigger: {
+    trigger: ".testimonials-section",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power3.out",
+});
+
+
   // Animation de la section Galerie
   const galleryItems = document.querySelectorAll(".gallery-section .gallery-item");
   const galleryLeft = document.querySelector(".gallery-section .left");
